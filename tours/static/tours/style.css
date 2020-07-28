@@ -1,0 +1,10 @@
+.img-fluid {
+  object-fit: cover;
+  height: 200px !important;
+}
+
+.img-fluid-main {
+  object-fit: cover;
+  object-position: 1% 0%;
+  height: 290px !important;
+}
