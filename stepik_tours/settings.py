@@ -25,7 +25,7 @@ SECRET_KEY = '3kbez6x+d(z3u6qexhg#o0_t9db+kx=171+ym__!z9!_guvaa5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #otherwise need webserver for static files
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
