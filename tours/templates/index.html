@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block container %}
+{% load static %}
+{% load define_action %}
+{% load mathfilters %}
+
+<div class="card text-center text-grey">
+  <img class="card-img img-fluid-main" src="{% static 'tours/bg.jpg' %}" alt="Card image">
+  <div class="card-img-overlay">
+    <h1 class="display-4">Всякие туры</h1>
+      <p class="lead">{{ subtitle }}</p>
+      <p class="mt-5 w-50 mx-auto">{{ description }}</p>
+  </div>
+</div>
+
+{% include 'cards.html' %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block container %}
+{% load static %}
+{% load define_action %}
+
+<h1 class="display-5 mt-4">Летим из {{ depart_city_name }}</h1>
+<p class="mb-4" >Найдено {{ tours_count }} {% if tours_count == 1 %}тур{% elif tours_count < 5 %}тура{% else %}туров{% endif %}, с ценой от {{ min_price }} до {{ max_price }} и от {{ min_nights }} до {{ max_nights }} ночей</p>
+
+<!-- CARDS -->
+
+{% include 'cards.html' %}
+{% endblock %}

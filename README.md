@@ -1,1 +1,1 @@
-# stepic_tours_week2
+# stepik_tours_week1

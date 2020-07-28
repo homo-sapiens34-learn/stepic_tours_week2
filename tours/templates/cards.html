@@ -1,0 +1,28 @@
+{% load static %}
+{% load define_action %}
+{% load mathfilters %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'tours/style.css' %}">
+
+<div class="row mt-5" data-test="cards">
+    {% for id, tour in tours.items %}
+    <div class="col-4" data-test="card">
+        <div class="card mb-3" >
+            <a href="/tour/{{ id }}/"><img class="card-img-top img-fluid" data-test="picture"
+                 src="{{ tour.picture }}"></a>
+        <div class="card-body">
+            <h6 class="card-title"><b>{{ tour.country }}: {{ tour.title }} {{ tour.stars }}&#9733</b></h6>
+            {% define tour.country|length as l1 %}
+            {% define tour.title|length as l2 %}
+            {% if l1|add:l2 < 34 %}
+                {% define 80 as descr_len %}
+            {% else %}
+                {% define 50 as descr_len %}
+            {% endif %}
+            <p class="card-text">{{ tour.description | truncatechars:descr_len }}</p>
+            <h6 class="card-text"><b>{{ tour.nights }} дней c {{ tour.date }} за {{ tour.price }}&#8381</b></h6>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
